@@ -3,10 +3,24 @@ import Button from "../components/Button";
 import { fn } from "@storybook/test";
 
 const meta = {
-  title: "Component/Button",
+  title: "Components/Button",
   component: Button,
   args: {
     onClick: fn(),
+  },
+  argTypes: {
+    variant: {
+      control: "select",
+      description: "버튼의 스타일",
+    },
+    children: {
+      control: "text",
+      description: "버튼에 출력될 내용",
+    },
+    disabled: {
+      control: "boolean",
+      description: "버튼 사용 가능 여부",
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
